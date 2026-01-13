@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Processor</title>
+</head>
+<body>
+
+<h2>Resize Image</h2>
+<form action="/resize" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" required><br><br>
+    Width: <input type="number" name="width" required><br><br>
+    Height: <input type="number" name="height" required><br><br>
+    <button type="submit">Upload & Resize</button>
+</form>
+
+{% if resized_file %}
+<br>
+<a href="/download/{{ resized_file }}">Download Resized Image</a>
+{% endif %}
+
+<hr>
+
+<h2>Restore Image</h2>
+<form action="/restore" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" required><br><br>
+    <button type="submit">Upload to Destination</button>
+</form>
+
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+
+</body>
+</html>
