@@ -366,3 +366,5 @@ Increase memory to 512 MB
 12. Conclusion 
 
 This project demonstrates a real-world event-driven serverless architecture using AWS S3 and Lambda. By using Pillow in a Lambda Layer, images can be efficiently resized in-memory without maintaining servers. 
+
+<img src="imgg.png" alt="Project Screenshot" width="800">
